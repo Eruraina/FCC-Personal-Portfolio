@@ -1,0 +1,261 @@
+/* Variables */
+:root{
+    --primary: #621313;
+    --secondary: #767474;
+}
+
+/* Reset */
+body,p,a,ul,li{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+
+/* Base styles */
+body{
+    background: var(--secondary);
+    overflow-x: hidden;
+}
+.button{
+    background: none;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.6);
+    display: inline-block;
+}
+.button:hover{
+    color: var(--secondary);
+    background: var(--primary);
+    cursor: pointer;
+}
+input,textarea{
+    background: rgba(255,255,255,0.05);
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 2px solid #A55F5F;
+}
+
+/* Fonts */
+body{
+    font-family: Texturina;
+    font-weight: normal;
+}
+h3,h4,p,a{
+    color: black;
+}
+p,.social a{
+    color: #420A0A;
+}
+h1{
+    font-size: 2em;
+}
+h3{
+    font-size: 1.4em;
+}
+h4{
+    font-size: 1.1em;
+    color: #655151;
+}
+.leading{
+    font-size: 1em;
+}
+.welcome-text p{
+    font-size: 1.3em;
+}
+
+/* Mobile devices */
+.grid{
+    display:grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+#navbar ul{
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    grid-column: 6/9;
+    justify-content: flex-end;
+    align-self: center;
+    padding: 10px 10px;
+    background: #655151;
+}
+#navbar li{
+    margin-left: 20px;
+}
+#navbar a:hover{
+    color: var(--primary);
+}
+#navbar img{
+    margin: 0 20px;
+    grid-column: 1/4;
+    grid-row: 1;
+    width: 70%;
+    border-bottom: 3px solid var(--primary);
+}
+#welcome-section{
+    padding: 0 20px 20px 20px;
+    height: 100vh;
+}
+.welcome-text{
+    grid-column: 1/6;
+    align-self: center;
+}
+.welcome-image{
+    grid-column: 4/8;
+    grid-row: 3;
+}
+.welcome-image img{
+    width: 200%;
+}
+#projects{
+    background: url("https://data.whicdn.com/images/319987174/original.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 30px 20px;
+}
+#projects-header{
+    margin: 0;
+    text-align: center;
+}
+#projects a{
+    grid-column: 1/9;
+    margin: 20px 0;
+    display: flex;
+}
+#projects a:hover{
+    box-shadow: 2px 3px 4px rgba(0,0,0,0.9);
+}
+.project-image{
+    border: 5px solid black;
+}
+#projects a *{
+    margin: 0 20px;
+    max-width: 40%;
+    align-self: center;
+}
+#contact{
+    padding: 30px 20px;
+    background: #4E4A4A;
+    margin: 20px;
+    border-radius: 20px;
+}
+#contact h3, #contact p{
+    text-align: center;
+    margin-bottom: 0;
+}
+#contact form{
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+#contact input, #contact textarea{
+    width: 100%;
+    margin: 10px 0;
+}
+#contact .button{
+    margin-top: 10px;
+    padding: 10px 30px;
+}
+footer{
+    padding: 30px 20px;
+    border-top: 2px solid var(--primary);
+}
+footer .copyright{
+    grid-column: 1/3;
+    font-size: 0.8em;
+}
+footer .social{
+    grid-column: 7/9;
+    display: flex;
+    justify-content: flex-end;
+}
+footer li{
+    margin: 0 6px;
+}
+i:hover{
+    color: black;
+}
+.copyright a:hover{
+    color: var(--primary);
+}
+
+/* Small tablet styles */
+@media screen and (min-width: 620px){
+
+    #navbar img{
+        margin: 0 20px;
+        grid-column: 1/5;
+        width: 50%;
+    }
+    .welcome-text{
+        grid-column: 1/5;
+        margin: auto 0;
+        text-align: center;
+    }
+    .welcome-image{
+        grid-column: 4/8;
+    }
+    .welcome-image img{
+        width: 150%;
+    }
+    #projects a{
+        grid-column: span 4;
+        display: block;
+        margin: 20px 0;
+    }
+    #projects a:last-child{
+        grid-column: 3/7;
+    }
+    #projects a *{
+        margin: 10px;
+        max-width: 60%;
+        margin: 10px 20%;
+    }
+    h4{
+        text-align: center;
+    }
+
+}
+
+/* Large tablets and laptop styles */
+@media screen and (min-width: 960px){
+
+    body{
+        font-size: 18px;
+    }
+    .grid{
+        width: 100%;
+        max-width: 1060px;
+        margin: 0 auto;
+    }
+    .welcome-text{
+        text-align: center;
+    }
+    .welcome-image{
+        width: 100%;
+        grid-column: 5/8;
+        grid-row: 1;
+    }
+    #navbar img{
+        margin: 0 20px;
+        grid-column: 1/5;
+        width: 30%;
+    }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1200px){
+
+    body{
+        font-size: 20px;
+    }
+    
+}
